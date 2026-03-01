@@ -1,0 +1,13 @@
+{"text": "do you have vegan options?, and order 1 steak", 
+
+"intents": ["dietary_request", "order_create"], 
+
+"intent_spans": 
+[{"intent": "dietary_request", "start": 0, "end": 26, 
+"text": "do you have vegan options?"}, 
+
+{"intent": "order_create", "start": 32, "end": 45, 
+"text": "order 1 steak"}], 
+
+"entities": [{"type": "diet", "value": "vegan"}, {"type": "quantity", "value": "1"}, 
+{"type": "dish", "value": "steak"}]}
