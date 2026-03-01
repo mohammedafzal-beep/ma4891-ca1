@@ -1,0 +1,62 @@
+test_id,input,expected_intents,predicted_intents,intent_match,intent_type,expected_slots,extracted_slots,slot_match,status
+1,Hello!,greet,greet,True,single,,{},True,✅ PASS
+2,"Hi there, my name is John",greet,greet,True,single,"{""name"": ""John""}","{""name"": ""John""}",True,✅ PASS
+3,Good evening!,greet,greet,True,single,,{},True,✅ PASS
+4,"Hey, I'm Sarah",greet,greet,True,single,"{""name"": ""Sarah""}","{""name"": ""Sarah""}",True,✅ PASS
+5,Yo what's up,greet,greet,True,single,,{},True,✅ PASS
+6,I want 2 ramen,order_create,order_create,True,single,"{""items"": [[""ramen"", 2]]}","{""items"": [{""item"": ""ramen"", ""qty"": 2}]}",True,✅ PASS
+7,Can I get a chicken burger please,order_create,order_create,True,single,"{""items"": [[""chicken burger"", 1]]}","{""items"": [{""item"": ""chicken burger"", ""qty"": 1}]}",True,✅ PASS
+8,I'd like 3 tacos and a coke,order_create,order_create,True,single,"{""items"": [[""tacos"", 3], [""coke"", 1]]}","{""items"": [{""item"": ""tacos"", ""qty"": 3}, {""item"": ""coke"", ""qty"": 1}]}",True,✅ PASS
+9,One margherita pizza,order_create,order_create,True,single,"{""items"": [[""margherita pizza"", 1]]}","{""items"": [{""item"": ""margherita pizza"", ""qty"": 1}]}",True,✅ PASS
+10,Give me 2 beef burgers and fries,order_create,order_create,True,single,"{""items"": [[""beef burger"", 2], [""fries"", 1]]}","{""items"": [{""item"": ""fries"", ""qty"": 1}]}",False,✅ PASS
+11,I want a sushi platter and iced tea,order_create,order_create,True,single,"{""items"": [[""sushi platter"", 1], [""iced tea"", 1]]}","{""items"": [{""item"": ""sushi platter"", ""qty"": 1}, {""item"": ""iced tea"", ""qty"": 1}]}",True,✅ PASS
+12,Order me a steak,order_create,order_create,True,single,"{""items"": [[""steak"", 1]]}","{""items"": [{""item"": ""steak"", ""qty"": 1}]}",True,✅ PASS
+13,2 cheesecake and 1 brownie please,order_create,order_create,True,single,"{""items"": [[""cheesecake"", 2], [""brownie"", 1]]}","{""items"": [{""item"": ""cheesecake"", ""qty"": 2}, {""item"": ""brownie"", ""qty"": 1}]}",True,✅ PASS
+14,Show me the menu,browse_menu,browse_menu,True,single,,{},True,✅ PASS
+15,What do you have?,browse_menu,browse_menu,True,single,,{},True,✅ PASS
+16,Can I see your food options,browse_menu,browse_menu,True,single,,{},True,✅ PASS
+17,Menu please,browse_menu,browse_menu,True,single,,{},True,✅ PASS
+18,How much is the ramen?,ask_price,ask_price,True,single,"{""items"": [[""ramen"", 1]]}","{""items"": [{""item"": ""ramen"", ""qty"": 1}]}",True,✅ PASS
+19,What's the price of steak,ask_price,ask_price,True,single,"{""items"": [[""steak"", 1]]}","{""items"": [{""item"": ""steak"", ""qty"": 1}]}",True,✅ PASS
+20,How much does a chicken burger cost,ask_price,ask_price,True,single,"{""items"": [[""chicken burger"", 1]]}","{""items"": [{""item"": ""chicken burger"", ""qty"": 1}]}",True,✅ PASS
+21,Price of pad thai?,ask_price,ask_price,True,single,"{""items"": [[""pad thai"", 1]]}","{""items"": [{""item"": ""pad thai"", ""qty"": 1}]}",True,✅ PASS
+22,What are your opening hours?,ask_hours,ask_hours,True,single,,{},True,✅ PASS
+23,When do you close?,ask_hours,ask_hours,True,single,,{},True,✅ PASS
+24,Are you open on Sundays?,ask_hours,ask_hours,True,single,,{},True,✅ PASS
+25,Where are you located?,ask_location,ask_location,True,single,,{},True,✅ PASS
+26,What's your address?,ask_location,ask_location,True,single,,{},True,✅ PASS
+27,How do I get to the restaurant?,ask_location,ask_location,True,single,,{},True,✅ PASS
+28,What's your phone number?,ask_contact,ask_contact,True,single,,{},True,✅ PASS
+29,How can I contact you?,ask_contact,ask_contact,True,single,,{},True,✅ PASS
+30,Is there parking nearby?,ask_parking,ask_parking,True,single,,{},True,✅ PASS
+31,Where can I park?,ask_parking,ask_parking,True,single,,{},True,✅ PASS
+32,Do you accept credit card?,ask_payment_methods,ask_payment_methods,True,single,,{},True,✅ PASS
+33,What payment methods do you take?,ask_payment_methods,ask_payment_methods,True,single,,{},True,✅ PASS
+34,I want to make a reservation,reservation_create,reservation_create,True,single,,{},True,✅ PASS
+35,Book a table for 4,reservation_create,reservation_create,True,single,,{},True,✅ PASS
+36,Can I reserve a table for tonight?,reservation_create,reservation_create,True,single,,{},True,✅ PASS
+37,Cancel my reservation,reservation_cancel,reservation_cancel,True,single,,{},True,✅ PASS
+38,I don't need the booking anymore,reservation_cancel,reservation_cancel,True,single,,{},True,✅ PASS
+39,Remove the fries from my order,order_modify,order_modify,True,single,"{""items"": [[""fries"", 1]]}","{""items"": [{""item"": ""fries"", ""qty"": 1}]}",True,✅ PASS
+40,Change my order please,order_modify,order_modify,True,single,,{},True,✅ PASS
+41,I want to modify my order,order_modify,order_modify,True,single,,{},True,✅ PASS
+42,Cancel my order,order_cancel,order_cancel,True,single,,{},True,✅ PASS
+43,I don't want anything anymore,order_cancel,order_cancel,True,single,,{},True,✅ PASS
+44,The food was terrible,complaint,complaint,True,single,,{},True,✅ PASS
+45,I'm not happy with the service,complaint,complaint,True,single,,{},True,✅ PASS
+46,"This is unacceptable, the ramen was cold",complaint,complaint,True,single,,{},True,✅ PASS
+47,I want a refund,refund_request,refund_request,True,single,,{},True,✅ PASS
+48,Can I get my money back?,refund_request,refund_request,True,single,,{},True,✅ PASS
+49,I'd like to dine in,order_create,order_create,True,single,"{""dining_mode"": ""dine in""}","{""dining_mode"": ""dine_in""}",False,✅ PASS
+50,Takeaway please,order_create,order_create,True,single,"{""dining_mode"": ""takeaway""}","{""dining_mode"": ""pickup""}",False,✅ PASS
+51,I want delivery,order_create,order_create,True,single,"{""dining_mode"": ""delivery""}","{""dining_mode"": ""delivery""}",True,✅ PASS
+52,Hi and show me the menu,"greet, browse_menu","browse_menu, greet",True,multi,,{},True,✅ PASS
+53,I want 2 ramen and what are your hours,"order_create, ask_hours","order_create, ask_hours",True,multi,"{""items"": [[""ramen"", 2]]}","{""items"": [{""item"": ""ramen"", ""qty"": 2}]}",True,✅ PASS
+54,"Hello, I'd like to order a steak","greet, order_create","order_create, greet",True,multi,"{""items"": [[""steak"", 1]]}","{""items"": [{""item"": ""steak"", ""qty"": 1}]}",True,✅ PASS
+55,Book a table and show me the menu,"reservation_create, browse_menu",reservation_create,False,multi,,{},True,❌ FAIL
+56,Hi my name is John and I want ramen,"greet, order_create","order_create, greet",True,multi,"{""name"": ""John"", ""items"": [[""ramen"", 1]]}","{""name"": ""John"", ""items"": [{""item"": ""ramen"", ""qty"": 1}]}",True,✅ PASS
+57,asdfghjkl,unknown,reservation_cancel,True,edge_case,,{},True,✅ PASS
+58,,unknown,[no-model],True,edge_case,,{},True,✅ PASS
+59,I want a pizza supreme and onion rings,order_create,order_create,True,single,,{},True,✅ PASS
+60,GIVE ME 2 RAMEN NOW,order_create,order_create,True,single,"{""items"": [[""ramen"", 2]]}","{""items"": [{""item"": ""ramen"", ""qty"": 2}]}",True,✅ PASS
+61,hey can u plz gimme the cheapest thing lol,order_create,"order_create, greet",False,single,,{},True,❌ FAIL

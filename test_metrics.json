@@ -1,0 +1,91 @@
+{
+  "total_tests": 61,
+  "intent_exact_match": 59,
+  "intent_accuracy": 96.7,
+  "intent_partial_match": 59,
+  "partial_match_rate": 96.7,
+  "single_intent_accuracy": 98.1,
+  "multi_intent_accuracy": 80.0,
+  "single_intent_total": 54,
+  "multi_intent_total": 5,
+  "slot_correct": 20,
+  "slot_total": 23,
+  "slot_accuracy": 87.0,
+  "per_intent": {
+    "ask_contact": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "ask_hours": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "ask_location": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "ask_parking": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "ask_payment_methods": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "ask_price": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "browse_menu": {
+      "precision": 1.0,
+      "recall": 0.833,
+      "f1": 0.909
+    },
+    "complaint": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "greet": {
+      "precision": 0.889,
+      "recall": 1.0,
+      "f1": 0.941
+    },
+    "order_cancel": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "order_create": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "order_modify": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "refund_request": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "reservation_cancel": {
+      "precision": 0.667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "reservation_create": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  }
+}

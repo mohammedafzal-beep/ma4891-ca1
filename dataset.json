@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "domain": "Restaurant Dining Area",
+    "restaurant_name": "Sakura Grill",
+    "version": "1.0",
+    "description": "Intent training examples and Knowledge Base for the Sakura Grill restaurant chatbot. Developed for MA4891 CA1.",
+    "authors": ["Student1", "Student2"],
+    "date": "2026-02-23"
+  },
+
+  "intents": [
+    {
+      "intent": "greet",
+      "examples": [
+        "hi", "hello", "hey", "good morning", "good afternoon", "good evening",
+        "howdy", "sup", "what's up", "yo", "hi there", "hello there",
+        "hey there", "good day", "greetings"
+      ]
+    },
+    {
+      "intent": "goodbye",
+      "examples": [
+        "bye", "goodbye", "see you", "goodnight", "good night", "exit", "quit",
+        "see you later", "take care", "bye bye", "farewell", "have a good day",
+        "I'm leaving", "gotta go", "cya"
+      ]
+    },
+    {
+      "intent": "select_dine_mode",
+      "examples": [
+        "dine in", "dine-in", "I want to dine in", "we'll eat here",
+        "takeaway", "take away", "takeaway please", "I want takeaway",
+        "delivery", "I'd like delivery", "deliver to my place",
+        "pickup", "I'll pick it up", "for here please",
+        "we are dining in", "pack it to go", "to go please"
+      ]
+    },
+    {
+      "intent": "select_table",
+      "examples": [
+        "table 5", "table 1", "table number 3", "table no 7",
+        "we're at table 10", "I'm sitting at table 2",
+        "can I have table 4", "put us at table 8",
+        "table for two at number 6", "I'd like table 12"
+      ]
+    },
+    {
+      "intent": "add_item",
+      "examples": [
+        "I want a chicken burger", "give me 2 cokes",
+        "can I get a ramen", "add a cheesecake to my order",
+        "I'd like the grilled salmon", "one margherita pizza please",
+        "get me fries and onion rings", "2 beef burgers",
+        "I'll have the steak", "can I have an iced latte",
+        "order a brownie", "I want pad thai and a sprite",
+        "add the caesar salad", "I'd like 3 garlic breads",
+        "one fresh orange juice please", "get me the soup of the day",
+        "I'll take an ice cream sundae", "2 iced teas and a pepperoni pizza"
+      ]
+    },
+    {
+      "intent": "remove_item",
+      "examples": [
+        "remove the coke", "delete the burger from my order",
+        "take off the fries", "I don't want the cheesecake anymore",
+        "drop the salad", "cancel the ramen", "no more onion rings",
+        "remove 1 chicken burger", "take the steak off"
+      ]
+    },
+    {
+      "intent": "browse_menu",
+      "examples": [
+        "show me the menu", "what do you have", "menu please",
+        "what's available", "what can I order", "show me your options",
+        "what are the mains", "show me drinks", "any desserts",
+        "browse the menu", "let me see the selection",
+        "what sides do you have", "show me your beverages"
+      ]
+    },
+    {
+      "intent": "ask_price",
+      "examples": [
+        "how much is the chicken burger", "what's the price of the ramen",
+        "cost of the steak", "how much does a coke cost",
+        "pricing for the cheesecake", "what does the grilled salmon cost",
+        "price of fries", "how much for a margherita pizza"
+      ]
+    },
+    {
+      "intent": "show_order",
+      "examples": [
+        "show my order", "what did I order", "my cart",
+        "current order", "view order", "order status",
+        "what's in my order", "show me my cart", "check my order"
+      ]
+    },
+    {
+      "intent": "confirm",
+      "examples": [
+        "confirm", "yes place the order", "place order", "that's all",
+        "done ordering", "finalize", "submit", "check out", "checkout",
+        "yes confirm", "I'm done", "place it", "all good, confirm"
+      ]
+    },
+    {
+      "intent": "cancel",
+      "examples": [
+        "cancel", "cancel my order", "abort", "never mind", "nevermind",
+        "forget it", "start over", "I changed my mind", "cancel everything",
+        "scrap the order", "undo everything"
+      ]
+    },
+    {
+      "intent": "pay",
+      "examples": [
+        "pay by card", "I'll pay cash", "card please",
+        "use paynow", "apple pay", "google pay", "credit card",
+        "debit card", "I want to pay with cash", "payment by visa",
+        "pay with mastercard", "I'll use apple pay"
+      ]
+    },
+    {
+      "intent": "complain",
+      "examples": [
+        "this is terrible", "horrible service", "I'm very disappointed",
+        "worst experience", "unacceptable", "this is disgusting",
+        "I'm angry", "furious about waiting", "complaint about the food",
+        "I want to make a complaint", "very unhappy with this"
+      ]
+    },
+    {
+      "intent": "help",
+      "examples": [
+        "help", "what can you do", "how does this work",
+        "show me commands", "guide me", "instructions please",
+        "I need help", "what are my options", "help me order"
+      ]
+    },
+    {
+      "intent": "hours",
+      "examples": [
+        "what are your hours", "when do you open",
+        "opening hours", "closing time", "what time do you close",
+        "are you open now", "when are you open", "your schedule"
+      ]
+    },
+    {
+      "intent": "location",
+      "examples": [
+        "where are you located", "your address", "location please",
+        "how do I get there", "directions to the restaurant",
+        "where is the restaurant", "what's your address"
+      ]
+    },
+    {
+      "intent": "contact",
+      "examples": [
+        "what's your phone number", "contact details",
+        "how do I call you", "email address", "your number",
+        "how to reach you", "can I call you"
+      ]
+    }
+  ],
+
+  "entities": {
+    "DINE_MODE": {
+      "values": ["dine_in", "takeaway", "delivery"],
+      "synonyms": {
+        "dine_in": ["dine in", "dine-in", "dinein", "eat here", "for here"],
+        "takeaway": ["takeaway", "take away", "take-away", "pickup", "pick up", "to go"],
+        "delivery": ["delivery", "deliver"]
+      }
+    },
+    "TABLE_NUMBER": {
+      "description": "Integer values 1 through 20 representing table numbers.",
+      "range": [1, 20]
+    },
+    "MENU_ITEM": {
+      "values": [
+        "chicken burger", "beef burger", "grilled salmon", "ramen",
+        "pad thai", "margherita pizza", "pepperoni pizza", "steak",
+        "caesar salad", "fries", "onion rings", "garlic bread",
+        "soup of the day", "coke", "sprite", "iced latte", "iced tea",
+        "fresh orange juice", "cheesecake", "brownie", "ice cream sundae"
+      ]
+    },
+    "PAYMENT_METHOD": {
+      "values": ["cash", "card", "paynow", "apple_pay", "google_pay"],
+      "synonyms": {
+        "card": ["card", "credit card", "debit card", "visa", "mastercard"],
+        "apple_pay": ["apple pay", "applepay"],
+        "google_pay": ["google pay", "googlepay"],
+        "paynow": ["paynow", "pay now"]
+      }
+    },
+    "CATEGORY": {
+      "values": ["mains", "sides", "drinks", "desserts"],
+      "synonyms": {
+        "mains": ["main", "mains", "entrees"],
+        "sides": ["side", "sides"],
+        "drinks": ["drink", "drinks", "beverage", "beverages"],
+        "desserts": ["dessert", "desserts", "sweet"]
+      }
+    }
+  },
+
+  "knowledge_base": {
+    "restaurant_name": "Sakura Grill 🌸",
+    "hours": "Mon–Sun: 10:00 AM – 10:00 PM",
+    "address": "123 Orchard Road, #05-01, Singapore 238858",
+    "contact": {
+      "phone": "+65 6123 4567",
+      "email": "hello@sakuragrill.sg"
+    },
+    "parking": "Free parking available at basement B1 & B2.",
+    "payment_modes": ["cash", "card", "paynow", "apple_pay", "google_pay"],
+    "menu": {
+      "mains": [
+        {"name": "Chicken Burger", "price": 12.90, "emoji": "🍔"},
+        {"name": "Beef Burger", "price": 14.90, "emoji": "🍔"},
+        {"name": "Grilled Salmon", "price": 18.50, "emoji": "🐟"},
+        {"name": "Ramen", "price": 13.90, "emoji": "🍜"},
+        {"name": "Pad Thai", "price": 12.50, "emoji": "🍝"},
+        {"name": "Margherita Pizza", "price": 15.90, "emoji": "🍕"},
+        {"name": "Pepperoni Pizza", "price": 16.90, "emoji": "🍕"},
+        {"name": "Steak", "price": 24.90, "emoji": "🥩"},
+        {"name": "Caesar Salad", "price": 10.90, "emoji": "🥗"}
+      ],
+      "sides": [
+        {"name": "Fries", "price": 5.90, "emoji": "🍟"},
+        {"name": "Onion Rings", "price": 6.50, "emoji": "🧅"},
+        {"name": "Garlic Bread", "price": 4.90, "emoji": "🍞"},
+        {"name": "Soup of the Day", "price": 6.90, "emoji": "🍲"}
+      ],
+      "drinks": [
+        {"name": "Coke", "price": 3.50, "emoji": "🥤"},
+        {"name": "Sprite", "price": 3.50, "emoji": "🥤"},
+        {"name": "Iced Latte", "price": 5.90, "emoji": "☕"},
+        {"name": "Iced Tea", "price": 4.50, "emoji": "🍵"},
+        {"name": "Fresh Orange Juice", "price": 6.50, "emoji": "🍊"}
+      ],
+      "desserts": [
+        {"name": "Cheesecake", "price": 8.90, "emoji": "🍰"},
+        {"name": "Brownie", "price": 7.50, "emoji": "🍫"},
+        {"name": "Ice Cream Sundae", "price": 9.50, "emoji": "🍨"}
+      ]
+    }
+  },
+
+  "dialogue_stages": [
+    {"stage": "GREETING", "required_slot": null, "description": "Bot greets the user and asks for dining preference."},
+    {"stage": "DINE_MODE", "required_slot": "dine_mode", "description": "User selects dine-in, takeaway, or delivery."},
+    {"stage": "TABLE", "required_slot": "table_number", "description": "User provides a table number (dine-in only)."},
+    {"stage": "MENU", "required_slot": "menu_items", "description": "User adds items from the menu to their order."},
+    {"stage": "PAYMENT", "required_slot": "payment_method", "description": "User selects a payment method."},
+    {"stage": "CONFIRM", "required_slot": "order_confirmed", "description": "User confirms the final order."},
+    {"stage": "DONE", "required_slot": null, "description": "Order is placed. Bot thanks the user."}
+  ]
+}
